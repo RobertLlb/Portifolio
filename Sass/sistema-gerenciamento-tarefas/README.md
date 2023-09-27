@@ -22,5 +22,5 @@ Este é um sistema de gerenciamento de tarefas desenvolvido como parte do meu po
 
 ## Autor
 
-[Seu Nome]
+Robert Barbosa
 
