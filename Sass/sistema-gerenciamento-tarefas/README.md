@@ -19,8 +19,23 @@ Este é um sistema de gerenciamento de tarefas desenvolvido como parte do meu po
 - HTML5
 - CSS3
 - JavaScript
+- Chart.js
+- Feathers Icons
 
 ## Autor
 
 Robert Barbosa
+
+## Capturas de Tela
+
+![Captura de Tela 1](screenshot1.png)
+![Captura de Tela 2](screenshot2.png)
+
+## Melhorias Recentes
+
+- Adicionou a funcionalidade de adicionar e remover tarefas.
+- Aprimorou a aparência e a usabilidade com estilos responsivos.
+- Adicionou a capacidade de alterar o status das tarefas.
+- Atualizou o gráfico de estatísticas para exibir os valores.
+- Adicionou um sistema de perguntas e respostas na seção de contato.
 
