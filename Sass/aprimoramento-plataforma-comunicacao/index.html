@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aprimoramento de Plataforma de Comunicação</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Cabeçalho -->
+    <header>
+        <h1>Aprimoramento de Plataforma de Comunicação</h1>
+    </header>
+
+    <!-- Seção de Conteúdo -->
+    <section class="content">
+        <div class="container">
+            <h2>Bem-vindo à Plataforma de Comunicação</h2>
+            <p>Esta é a nossa plataforma de comunicação aprimorada, que oferece recursos avançados para manter você conectado.</p>
+        </div>
+    </section>
+
+    <!-- Seção de Chat em Tempo Real -->
+<section class="real-time-chat">
+    <div class="container">
+        <h2>Chat em Tempo Real</h2>
+        <div class="chat-container">
+            <div class="chat-messages" id="chatMessages">
+                <!-- As mensagens do chat serão exibidas aqui -->
+            </div>
+            <div class="chat-input">
+                <input type="text" id="messageInput" placeholder="Digite sua mensagem">
+                <button id="sendMessage">Enviar</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    <!-- Seção de Segurança da Aplicação -->
+    <section class="application-security">
+        <div class="container">
+            <h2>Segurança da Aplicação</h2>
+            <p>Nossa plataforma utiliza medidas avançadas de segurança para proteger seus dados e garantir a confidencialidade das informações.</p>
+        </div>
+    </section>
+
+    <!-- Seção de Desempenho da Aplicação -->
+    <section class="application-performance">
+        <div class="container">
+            <h2>Desempenho da Aplicação</h2>
+            <p>Estamos constantemente monitorando o desempenho da nossa aplicação para garantir uma experiência rápida e confiável para nossos usuários.</p>
+        </div>
+    </section>
+
+    <!-- Seção de Contato -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2>Entre em Contato</h2>
+            <p>Estamos aqui para responder às suas perguntas e ajudá-lo a começar com nossa plataforma. Preencha o formulário abaixo e entraremos em contato em breve.</p>
+            <form id="contactForm">
+                <div class="form-group">
+                    <label for="name">Nome:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Mensagem:</label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+                <button type="submit" class="cta-button">Enviar Mensagem</button>
+            </form>
+            <div id="questionList">
+                <!-- As perguntas serão adicionadas aqui -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>&copy; 2023 Aprimoramento de Plataforma de Comunicação</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="chat-tempo-real.js"></script>
+    <script src="seguranca-aplicacao.js"></script>
+    <script src="desempenho-aplicacao.js"></script>
+</body>
+</html>

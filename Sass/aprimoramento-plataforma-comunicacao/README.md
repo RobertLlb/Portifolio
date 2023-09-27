@@ -1,26 +1,45 @@
-# Sistema de Gerenciamento de Tarefas
+# Aprimoramento da Plataforma de Comunicação
 
-Este é um sistema de gerenciamento de tarefas desenvolvido como parte do meu portfólio. Ele inclui integração com serviços de terceiros e recursos avançados de relatórios.
+Esta seção descreve as melhorias recentes na nossa plataforma de comunicação e documenta as novas funcionalidades e atualizações.
 
-## Funcionalidades
+## Funcionalidades Adicionadas
 
-- Criação e atribuição de tarefas a usuários.
-- Integração com serviços de terceiros para notificações.
-- Geração de relatórios avançados de desempenho.
+- **Mensagens em Grupo:** Agora você pode criar e participar de mensagens em grupo, tornando a comunicação em equipe mais eficiente.
 
-## Como Usar
+- **Notificações Personalizadas:** Personalize suas preferências de notificação para receber alertas apenas sobre as mensagens mais importantes.
 
-1. Clone este repositório.
-2. Abra o arquivo `index.html` em seu navegador.
-3. Comece a gerenciar suas tarefas!
+- **Compartilhamento de Arquivos:** Compartilhe arquivos diretamente nas conversas para facilitar a colaboração.
+
+## Como Utilizar
+
+Para aproveitar ao máximo as novas funcionalidades:
+
+1. Faça login na sua conta na plataforma de comunicação.
+
+2. Explore as opções de mensagens em grupo e convide colegas para participar.
+
+3. Ajuste suas configurações de notificação nas preferências da conta.
+
+4. Experimente o recurso de compartilhamento de arquivos para compartilhar documentos e recursos.
 
 ## Tecnologias Utilizadas
 
-- HTML5
-- CSS3
-- JavaScript
+- Tecnologia de Mensagens em Tempo Real
+- Armazenamento em Nuvem para Compartilhamento de Arquivos
+- Gerenciamento de Notificações
 
 ## Autor
 
-[Seu Nome]
+Nome do Autor
+
+## Capturas de Tela
+
+![Captura de Tela 1](screenshot1.png)
+![Captura de Tela 2](screenshot2.png)
+
+## Melhorias Recentes
+
+- Introdução das mensagens em grupo para melhorar a colaboração em equipe.
+- Personalização das notificações para uma experiência mais tranquila.
+- Compartilhamento de arquivos para facilitar o compartilhamento de recursos.
 
