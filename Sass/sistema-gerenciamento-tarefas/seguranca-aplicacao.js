@@ -46,7 +46,7 @@ app.use((req, res, next) => {
   next();
 });
 
-// Exemplo de rota segura
+// Rota segura
 app.get('/rota-segura', (req, res) => {
   res.json({ mensagem: 'Esta é uma rota segura.' });
 });
