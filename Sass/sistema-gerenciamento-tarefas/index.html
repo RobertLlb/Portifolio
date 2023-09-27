@@ -1,14 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gerenciamento de Tarefas</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
+
 <body>
     <header>
-        <h1>Sistema de Gerenciamento de Tarefas</h1>
+        <h1><i class="fa fa-superpowers" aria-hidden="true"></i> Sistema de Gerenciamento de Tarefas</h1>
         <nav>
             <ul>
                 <li><a href="#">Tarefas</a></li>
@@ -17,52 +22,134 @@
             </ul>
         </nav>
     </header>
-
     <main>
-        <section class="task-list">
-            <h2>Tarefas Pendentes</h2>
-            <ul>
-                <li>
-                    <input type="checkbox" id="task1">
-                    <label for="task1">Concluir relatório mensal</label>
-                </li>
-                <li>
-                    <input type="checkbox" id="task2">
-                    <label for="task2">Reunião com a equipe de desenvolvimento</label>
-                </li>
-                <!-- Adicione mais tarefas aqui -->
-            </ul>
+        <!-- Seção de Apresentação (Hero Section) -->
+        <section class="hero">
+            <div class="container">
+                <h1>Bem-vindo ao Sistema de Gerenciamento de Tarefas</h1>
+                <p>O sistema perfeito para organizar suas tarefas e projetos de forma eficiente.</p>
+                <a href="#contact" class="cta-button">Experimente Agora</a>
+            </div>
+        </section>
+        <!-- Seção de Sobre -->
+        <section class="about">
+            <div class="container">
+                <h2>Sobre</h2>
+                <p>O nosso sistema de gerenciamento de tarefas é projetado para ajudar você a manter-se produtivo e
+                    focado. Com recursos avançados, você pode facilmente organizar tarefas, acompanhar o progresso dos
+                    projetos e muito mais.</p>
+            </div>
+        </section>
+        <!-- Seção de Estatísticas -->
+        <section class="statistics">
+            <div class="container">
+                <h2>Controle de Tarefas</h2>
+                <div class="stats">
+                    <canvas id="donutChart" width="200" height="200"></canvas>
+                </div>
+                <div class="task-actions">
+                    <input type="text" id="newTask" placeholder="Nova Tarefa">
+                    <button id="addTask">Adicionar Tarefa</button>
+
+                </div>
+                <div class="task-list">
+                    <h3>Lista de Tarefas</h3>
+                    <ul id="taskList"></ul>
+                </div>
+            </div>
         </section>
 
-        <section class="project-list">
-            <h2>Projetos Ativos</h2>
-            <ul>
-                <li><a href="#">Projeto A</a></li>
-                <li><a href="#">Projeto B</a></li>
-                <li><a href="#">Projeto C</a></li>
-                <!-- Adicione mais projetos aqui -->
-            </ul>
+        <!-- Seção de Contato -->
+        <section class="contact" id="contact">
+            <div class="container">
+                <h2>Entre em Contato</h2>
+                <p>Estamos aqui para responder às suas perguntas e ajudá-lo a começar com nosso sistema. Preencha o
+                    formulário abaixo e entraremos em contato em breve.</p>
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Nome:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Mensagem:</label>
+                        <textarea id="message" name="message" required></textarea>
+                    </div>
+                    <button type="submit" class="cta-button">Enviar Mensagem</button>
+                </form>
+                <br><br>
+                <div class="task-list">
+                    <h3>Lista de Mensagens</h3>
+                    <ul id="taskList">
+                        <div id="questionList">
+                            <!-- As perguntas serão adicionadas aqui -->
+                        </div>
+                    </ul>
+                </div>
+
+            </div>
         </section>
-
-        <!-- Botão para gerar relatórios avançados -->
-        <button id="gerarRelatorios">Gerar Relatórios Avançados</button>
-
-        <div id="relatoriosAvancados">
-            <!-- Aqui os relatórios avançados serão exibidos -->
-        </div>
         
-        <h1>Previsão do Tempo</h1>
-        <div id="previsaoTempo">
-            <!-- Aqui a previsão do tempo será exibida -->
-        </div>
-
-        <script src="integracao-terceiros.js"></script>
+        <!-- Seção de Depoimentos -->
+        <section class="testimonials">
+            <div class="container">
+                <!-- Quadro com a média das avaliações -->
+                <div class="average-rating">
+                    <p> <i class="fa fa-certificate" aria-hidden="true"></i>Média das Avaliações: <span
+                            id="average-rating">5</span> / 5</p>
+                </div>
+                <h2>Depoimentos</h2>
+                <!-- Depoimento 1 -->
+                <div class="testimonial">
+                    <div class="testimonial-image">
+                        <img src="https://img.freepik.com/fotos-gratis/ai-generated-cute-girl-pic_23-2150649950.jpg?t=st=1695830870~exp=1695831470~hmac=8446cd4124737b18362d856ce10aaeffc7f08a4ce095b894881ca8b28838e41b"
+                            alt="Imagem do Depoimento 1">
+                    </div>
+                    <div class="testimonial-content">
+                        <blockquote>"Este sistema mudou a forma como fazemos negócios. É incrivelmente útil e fácil de
+                            usar!"</blockquote>
+                        <div class="rating">
+                            <!-- Classificação com ícones de estrela -->
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star"></span>
+                        </div>
+                        <p class="author">- Maria Silva, CEO da Empresa XYZ</p>
+                    </div>
+                </div>
+                <!-- Depoimento 2 -->
+                <div class="testimonial">
+                    <div class="testimonial-image">
+                        <img src="https://img.freepik.com/fotos-gratis/ai-generated-cute-girl-pic_23-2150649850.jpg?t=st=1695830870~exp=1695831470~hmac=ed390963ee5c79039a604c4cfdde93a58844b10201de4c9715495891178f8bc8"
+                            alt="Imagem do Depoimento 2">
+                    </div>
+                    <div class="testimonial-content">
+                        <blockquote>"Ótimo sistema, superou nossas expectativas! Altamente recomendado."</blockquote>
+                        <div class="rating">
+                            <!-- Classificação com ícones de estrela -->
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                        </div>
+                        <p class="author">- Katia Solomon, Diretora de TI da Empresa ABC</p>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
-
     <footer>
         <p>&copy; 2023 Gerenciamento de Tarefas</p>
     </footer>
+    <script src="statistics.js"></script>
     <script src="script.js"></script>
     <script src="relatorios-avancados.js"></script>
 </body>
+
 </html>
