@@ -99,6 +99,87 @@ footer p {
     border: 1px solid #ccc; /* Adicione uma borda para delimitar a área de mensagens */
     padding: 10px;
 }
+/* Estilos para o formulário de contato */
+#contactForm {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.form-group textarea {
+    height: 150px;
+}
+
+button.cta-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+button.cta-button:hover {
+    background-color: #0056b3;
+}
+
+/* Estilos para a lista de perguntas */
+#questionList {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.question {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+}
+
+.question p {
+    margin: 0 0 10px;
+    font-size: 1rem;
+    color: #333;
+}
+
+.container {
+    border-radius: 10px;
+    background-color: #ffffff;
+    color: black !important;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
 
 /* Estilos para dispositivos móveis (largura máxima de 768px) */
 @media screen and (max-width: 768px) {

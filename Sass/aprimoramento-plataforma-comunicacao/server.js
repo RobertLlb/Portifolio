@@ -1,32 +1,37 @@
-const express = require('express');
-const http = require('http');
-const socketIo = require('socket.io');
+
+
+const express = require("express");
+const fs = require("fs");
+const bodyParser = require("body-parser");
 
 const app = express();
-const server = http.createServer(app);
-const io = socketIo(server);
+const port = process.env.PORT || 3000;
 
-// Configurar uma rota para servir a página HTML do chat
-app.get('/', (req, res) => {
-  res.sendFile(__dirname + '/index.html');
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
+
+// Rota para receber os dados do formulário e salvá-los em um arquivo JSON
+app.post("/saveData", (req, res) => {
+    const data = req.body;
+
+    // Carrega os dados existentes (se houver) do arquivo JSON
+    let existingData = [];
+    try {
+        const rawData = fs.readFileSync("data.json");
+        existingData = JSON.parse(rawData);
+    } catch (error) {
+        console.error("Erro ao carregar dados existentes:", error);
+    }
+
+    // Adiciona os novos dados ao array existente
+    existingData.push(data);
+
+    // Salva os dados atualizados de volta no arquivo JSON
+    fs.writeFileSync("data.json", JSON.stringify(existingData, null, 2));
+
+    res.json({ success: true });
 });
 
-// Evento de conexão
-io.on('connection', (socket) => {
-  console.log('Um usuário se conectou');
-
-  // Evento para quando uma mensagem é enviada
-  socket.on('chat message', (msg) => {
-    io.emit('chat message', msg); // Transmita a mensagem para todos os clientes
-  });
-
-  // Evento de desconexão
-  socket.on('disconnect', () => {
-    console.log('Um usuário se desconectou');
-  });
-});
-
-// Iniciar o servidor na porta 3000
-server.listen(3000, () => {
-  console.log('Servidor Socket.io rodando na porta 3000');
+app.listen(port, () => {
+    console.log(`Servidor rodando na porta ${port}`);
 });

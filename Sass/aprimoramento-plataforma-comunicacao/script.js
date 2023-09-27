@@ -1,20 +1,7 @@
-// Função para abrir e fechar o menu de navegação móvel
-function toggleMobileMenu() {
-    const mobileMenu = document.getElementById("mobile-menu");
-    if (mobileMenu.style.display === "block") {
-        mobileMenu.style.display = "none";
-    } else {
-        mobileMenu.style.display = "block";
-    }
-}
-
-// Event listener para o botão de menu móvel
-const mobileMenuButton = document.getElementById("mobile-menu-button");
-if (mobileMenuButton) {
-    mobileMenuButton.addEventListener("click", toggleMobileMenu);
-}
-
 // Função para validar o formulário de contato
+
+
+let username = null;
 function validateContactForm() {
     const nameInput = document.getElementById("name");
     const emailInput = document.getElementById("email");
@@ -41,12 +28,34 @@ function validateContactForm() {
     return true;
 }
 
-// Event listener para o envio do formulário de contato
-const contactForm = document.getElementById("contactForm");
-if (contactForm) {
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    const contactForm = document.getElementById("contactForm");
+    const questionList = document.getElementById("questionList");
+
     contactForm.addEventListener("submit", function (e) {
-        if (!validateContactForm()) {
-            e.preventDefault();
-        }
+        e.preventDefault();
+
+        // Captura os valores do formulário
+        const name = document.getElementById("name").value;
+        const email = document.getElementById("email").value;
+        const message = document.getElementById("message").value;
+
+        // Cria um elemento de pergunta com as informações do formulário
+        const questionItem = document.createElement("div");
+        questionItem.classList.add("question");
+        questionItem.innerHTML = `
+            <p><strong><i class="fa fa-user" aria-hidden="true"></i> Nome:</strong> ${name}</p>
+            <p><strong> <i class="fa fa-envelope-o" aria-hidden="true"></i> Email:</strong> ${email}</p>
+            <p><strong><i class="fa fa-comment-o" aria-hidden="true"></i> Mensagem:</strong> ${message}</p>
+        `;
+
+        // Adiciona a pergunta à lista de perguntas
+        questionList.appendChild(questionItem);
+
+        // Limpa o formulário
+        contactForm.reset();
     });
-}
+});
+

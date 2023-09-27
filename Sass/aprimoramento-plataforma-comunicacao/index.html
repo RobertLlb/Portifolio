@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aprimoramento de Plataforma de Comunicação</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="/socket.io/socket.io.js"></script>
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
+
 <body>
     <!-- Cabeçalho -->
     <header>
@@ -18,40 +20,30 @@
     <section class="content">
         <div class="container">
             <h2>Bem-vindo à Plataforma de Comunicação</h2>
-            <p>Esta é a nossa plataforma de comunicação aprimorada, que oferece recursos avançados para manter você conectado.</p>
+            <p>Esta é a nossa plataforma de comunicação aprimorada, que oferece recursos avançados para manter você
+                conectado.</p>
         </div>
     </section>
 
     <!-- Seção de Chat em Tempo Real -->
-<section class="real-time-chat">
-    <div class="container">
-        <h2>Chat em Tempo Real</h2>
-        <ul id="messages"></ul>
-        <div class="chat-container">
-            <div class="chat-messages" id="chatMessages">
-                <!-- As mensagens do chat serão exibidas aqui -->
-            </div>
-            <div class="chat-input">
-                <input type="text" id="messageInput" placeholder="Digite sua mensagem">
-                <button id="sendMessage">Enviar</button>
-            </div>
-        </div>
-    </div>
-</section>
-
-    <!-- Seção de Segurança da Aplicação -->
-    <section class="application-security">
+    <section class="real-time-chat">
         <div class="container">
-            <h2>Segurança da Aplicação</h2>
-            <p>Nossa plataforma utiliza medidas avançadas de segurança para proteger seus dados e garantir a confidencialidade das informações.</p>
-        </div>
-    </section>
-
-    <!-- Seção de Desempenho da Aplicação -->
-    <section class="application-performance">
-        <div class="container">
-            <h2>Desempenho da Aplicação</h2>
-            <p>Estamos constantemente monitorando o desempenho da nossa aplicação para garantir uma experiência rápida e confiável para nossos usuários.</p>
+            <h2>Chat em Tempo Real</h2>
+            <div id="usernameInput" style="display: block;">
+                <label for="username">Digite seu nome de usuário:</label>
+                <input type="text" id="username" placeholder="Nome de Usuário">
+                <button id="setUsername">Entrar no Chat</button>
+            </div>
+            <ul id="messages" style="display: none;"></ul>
+            <div class="chat-container" style="display: none;">
+                <div class="chat-messages" id="chatMessages">
+                    <!-- As mensagens do chat serão exibidas aqui -->
+                </div>
+                <div class="chat-input">
+                    <input type="text" id="messageInput" placeholder="Digite sua mensagem">
+                    <button id="sendMessage">Enviar</button>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -59,7 +51,8 @@
     <section class="contact" id="contact">
         <div class="container">
             <h2>Entre em Contato</h2>
-            <p>Estamos aqui para responder às suas perguntas e ajudá-lo a começar com nossa plataforma. Preencha o formulário abaixo e entraremos em contato em breve.</p>
+            <p>Estamos aqui para responder às suas perguntas e ajudá-lo a começar com nosso sistema. Preencha o
+                formulário abaixo e entraremos em contato em breve.</p>
             <form id="contactForm">
                 <div class="form-group">
                     <label for="name">Nome:</label>
@@ -75,9 +68,16 @@
                 </div>
                 <button type="submit" class="cta-button">Enviar Mensagem</button>
             </form>
-            <div id="questionList">
-                <!-- As perguntas serão adicionadas aqui -->
+            <br><br>
+            <div class="task-list">
+                <h3>Lista de Mensagens</h3>
+                <ul id="taskList">
+                    <div id="questionList">
+                        <!-- As perguntas serão adicionadas aqui -->
+                    </div>
+                </ul>
             </div>
+
         </div>
     </section>
 
@@ -87,10 +87,65 @@
     </footer>
 
     <!-- Scripts -->
-    <script src="/socket.io/socket.io.js"></script>
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="chat-tempo-real.js"></script>
-<script src="seguranca-aplicacao.js"></script>
-<script src="desempenho-aplicacao.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const contactForm = document.getElementById("contactForm");
+            const questionList = document.getElementById("questionList");
+    
+            contactForm.addEventListener("submit", function (e) {
+                e.preventDefault();
+    
+                // Captura os valores do formulário
+                const name = document.getElementById("name").value;
+                const email = document.getElementById("email").value;
+                const message = document.getElementById("message").value;
+    
+                // Cria um objeto com os dados do formulário
+                const formData = {
+                    name,
+                    email,
+                    message,
+                };
+    
+                // Envia os dados para o servidor Node.js
+                fetch("/saveData", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                    },
+                    body: JSON.stringify(formData),
+                })
+                    .then((response) => response.json())
+                    .then((data) => {
+                        if (data.success) {
+                            // Cria um elemento de pergunta com as informações do formulário
+                            const questionItem = document.createElement("div");
+                            questionItem.classList.add("question");
+                            questionItem.innerHTML = `
+                                <p><strong><i class="fa fa-user" aria-hidden="true"></i> Nome:</strong> ${name}</p>
+                                <p><strong> <i class="fa fa-envelope-o" aria-hidden="true"></i> Email:</strong> ${email}</p>
+                                <p><strong><i class="fa fa-comment-o" aria-hidden="true"></i> Mensagem:</strong> ${message}</p>
+                            `;
+    
+                            // Adiciona a pergunta à lista de perguntas
+                            questionList.appendChild(questionItem);
+    
+                            // Limpa o formulário
+                            contactForm.reset();
+                        }
+                    })
+                    .catch((error) => {
+                        console.error("Erro ao enviar dados:", error);
+                    });
+            });
+        });
+    </script>
+    
+    <script src="script.js"></script>
+    <script src="server.js"></script>
+    <script src="chat-tempo-real.js"></script>
+    <script src="seguranca-aplicacao.js"></script>
+    <script src="desempenho-aplicacao.js"></script>
 </body>
+
 </html>
