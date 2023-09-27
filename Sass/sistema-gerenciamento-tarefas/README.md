@@ -28,8 +28,9 @@ Robert Barbosa
 
 ## Capturas de Tela
 
-![Captura de Tela 1](screenshot1.png)
-![Captura de Tela 2](screenshot2.png)
+![Captura de Tela 1](screenshot2.png)
+![Captura de Tela 2](screenshot1.png)
+![Captura de Tela 3](screenshot3.png)
 
 ## Melhorias Recentes
 
