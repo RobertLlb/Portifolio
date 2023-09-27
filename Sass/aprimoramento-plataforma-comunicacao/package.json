@@ -1,0 +1,16 @@
+{
+  "name": "aprimoramento-plataforma-comunicacao",
+  "version": "1.0.0",
+  "description": "Esta seção descreve as melhorias recentes na nossa plataforma de comunicação e documenta as novas funcionalidades e atualizações.",
+  "main": "chat-tempo-real.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "socket.io": "^4.7.2"
+  }
+}

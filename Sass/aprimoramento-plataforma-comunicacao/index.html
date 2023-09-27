@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aprimoramento de Plataforma de Comunicação</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="/socket.io/socket.io.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
     <!-- Cabeçalho -->
@@ -24,6 +26,7 @@
 <section class="real-time-chat">
     <div class="container">
         <h2>Chat em Tempo Real</h2>
+        <ul id="messages"></ul>
         <div class="chat-container">
             <div class="chat-messages" id="chatMessages">
                 <!-- As mensagens do chat serão exibidas aqui -->
@@ -35,7 +38,6 @@
         </div>
     </div>
 </section>
-
 
     <!-- Seção de Segurança da Aplicação -->
     <section class="application-security">
@@ -85,8 +87,10 @@
     </footer>
 
     <!-- Scripts -->
-    <script src="chat-tempo-real.js"></script>
-    <script src="seguranca-aplicacao.js"></script>
-    <script src="desempenho-aplicacao.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="chat-tempo-real.js"></script>
+<script src="seguranca-aplicacao.js"></script>
+<script src="desempenho-aplicacao.js"></script>
 </body>
 </html>
