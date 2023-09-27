@@ -1,5 +1,9 @@
 # Portifolio
 
+Sistema de Gerenciamento de Tarefas
+
+Aprimoramento de Plataforma de Comunicação
+
 # Projetos
 
 ## Sistema de Gerenciamento de Tarefas
