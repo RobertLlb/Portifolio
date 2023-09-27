@@ -3,18 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciamento de Tarefas</title>
     <link rel="stylesheet" href="styles.css">
-    <title>Sistema de Gerenciamento de Tarefas</title>
 </head>
 <body>
     <header>
         <h1>Sistema de Gerenciamento de Tarefas</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Tarefas</a></li>
+                <li><a href="#">Projetos</a></li>
+                <li><a href="#">Configurações</a></li>
+            </ul>
+        </nav>
     </header>
+
     <main>
-        <!-- Conteúdo do sistema -->
+        <section class="task-list">
+            <h2>Tarefas Pendentes</h2>
+            <ul>
+                <li>
+                    <input type="checkbox" id="task1">
+                    <label for="task1">Concluir relatório mensal</label>
+                </li>
+                <li>
+                    <input type="checkbox" id="task2">
+                    <label for="task2">Reunião com a equipe de desenvolvimento</label>
+                </li>
+                <!-- Adicione mais tarefas aqui -->
+            </ul>
+        </section>
+
+        <section class="project-list">
+            <h2>Projetos Ativos</h2>
+            <ul>
+                <li><a href="#">Projeto A</a></li>
+                <li><a href="#">Projeto B</a></li>
+                <li><a href="#">Projeto C</a></li>
+                <!-- Adicione mais projetos aqui -->
+            </ul>
+        </section>
     </main>
+
+    <footer>
+        <p>&copy; 2023 Gerenciamento de Tarefas</p>
+    </footer>
     <script src="script.js"></script>
-    <script src="integracao-terceiros.js"></script>
-    <script src="relatorios-avancados.js"></script>
 </body>
 </html>
