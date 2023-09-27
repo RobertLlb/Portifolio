@@ -1,0 +1,17 @@
+/* Estilos para o sistema de gerenciamento de tarefas */
+body {
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: #007bff;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+h1 {
+    margin: 0;
+}
+
+/* Outros estilos */
