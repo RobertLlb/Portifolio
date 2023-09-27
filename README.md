@@ -31,5 +31,3 @@ Trabalhei em uma plataforma de comunicação SaaS com o objetivo de aprimorar a 
 Essas melhorias ajudaram a plataforma a se tornar uma ferramenta de comunicação mais poderosa e segura para seus usuários, promovendo uma colaboração eficaz.
 
 ---
-
-Sinta-se à vontade para personalizar este descritivo conforme necessário e adicionar mais detalhes sobre os projetos, incluindo tecnologias utilizadas, resultados alcançados e quaisquer outros aspectos relevantes. Isso fornecerá uma visão clara de suas realizações em seu portfólio no GitHub.
