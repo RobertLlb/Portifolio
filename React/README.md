@@ -1,7 +1,8 @@
 # Weather App
 
 ![Weather App Screenshot](screenshot.png)
-
+![Weather App Screenshot](screenshot1.png)
+![Weather App Screenshot](screenshot2.png)
 Este é um aplicativo de previsão do tempo simples construído com React. Ele permite que os usuários obtenham informações meteorológicas para uma cidade específica.
 
 ## Funcionalidades
