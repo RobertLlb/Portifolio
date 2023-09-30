@@ -1,0 +1,189 @@
+/* Estilo base para dispositivos móveis */
+.App {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background-color: #f0f0f0;
+  padding: 10px;
+}
+
+/* Estilo para o navbar */
+.navbar {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  display: flex;
+  align-items: center; /* Centralizar itens verticalmente */
+  justify-content: space-between; /* Espaço entre os elementos do Navbar */
+}
+
+/* Estilizando os links do navbar */
+.navbar ul {
+  list-style: none;
+  display: flex;
+  padding: 0;
+}
+
+.navbar li {
+  margin: 0 10px;
+}
+
+/* Removendo o sublinhado azul dos links */
+.navbar a {
+  color: #fff;
+  text-decoration: none; /* Remova o sublinhado */
+}
+
+/* Estilo para os links ativos */
+.navbar a:hover {
+  color: #007bff; /* Altere a cor quando o link estiver em foco */
+}
+
+/* Adicione 'clear: both' para a classe cidadestatus para garantir que fique abaixo dos outros elementos */
+.cidadestatus {
+  margin-top: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  margin: 20px auto;
+  clear: both; /* Adicionando clear */
+}
+
+.cidadestatus p {
+  font-size: 1rem;
+  margin: 8px 0; /* Espaçamento entre os parágrafos */
+}
+
+.cidadestatus img {
+  max-width: 100px; /* Largura máxima da imagem */
+  height: auto;
+  display: block;
+  margin: 0 auto; /* Centralizar a imagem horizontalmente */
+}
+
+.no-result {
+  margin-top: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  margin: 20px auto;
+  clear: both; /* Adicionando clear */
+}
+
+/* Estilo para o footer */
+.footer {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  margin-top: 20px; /* Adicionando margem superior para espaçamento */
+  text-align: center;
+}
+
+/* Estilo para o formulário de pesquisa */
+.searchWrapper {
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.search {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
+
+.search h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+input[type="text"] {
+  width: 50%;
+  padding: 10px;
+  margin: 0;
+  margin-left: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  background-color: #007bff;
+  color: #fff;
+  border: 1px solid #ccc;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.error {
+  color: #ff0000;
+  margin-top: 10px;
+}
+
+/* Estilo para a caixa de seleção de idioma */
+.language-select {
+  font-size: 12px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 5px;
+  display: flex;
+  align-items: center; /* Centralizar itens verticalmente */
+}
+
+/* Estilizar as opções de idioma no seletor */
+.language-select select {
+  border: none;
+  background-color: transparent;
+  margin-right: 5px; /* Adicionar um espaço entre a caixa de seleção e as bandeiras */
+}
+
+/* Estilo para as bandeiras de idioma */
+.language-flag {
+  font-size: 16px;
+  margin-right: 5px; /* Adicionar um espaço entre as bandeiras */
+}
+
+/* Media query para dispositivos maiores, como tablets */
+@media (min-width: 1800px) {
+  .App {
+    padding: 20px;
+  }
+
+  .navbar ul {
+    justify-content: flex-start;
+  }
+
+  .navbar li {
+    margin: 0 20px;
+  }
+
+  .searchWrapper {
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start; /* Alinhar os itens à esquerda */
+  }
+
+  .search {
+    width: auto;
+    margin-right: 20px;
+  }
+}
