@@ -3,28 +3,6 @@
 ![Weather App Screenshot](screenshot.png)
 ![Weather App Screenshot](screenshot1.png)
 ![Weather App Screenshot](screenshot2.png)
-Este é um aplicativo de previsão do tempo simples construído com React. Ele permite que os usuários obtenham informações meteorológicas para uma cidade específica.
-
-## Funcionalidades
-
-- Pesquisa de previsão do tempo por nome da cidade.
-- Exibição da temperatura atual, país, nome da cidade e descrição do clima.
-- Ícone de clima correspondente à condição atual.
-
-## Como usar
-
-1. Clone o repositório para o seu ambiente local:
-
-   ```bash
-   git clone https://github.com/seu-usuario/weather-app.git
-
-Claro, aqui está o código completo do arquivo README.md:
-
-markdown
-Copy code
-# Weather App
-
-![Weather App Screenshot](screenshot.png)
 
 Este é um aplicativo de previsão do tempo simples construído com React. Ele permite que os usuários obtenham informações meteorológicas para uma cidade específica.
 
