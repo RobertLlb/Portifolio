@@ -2,7 +2,7 @@
 
 Bem-vindo ao meu portfólio, onde você pode conhecer alguns dos projetos em que trabalhei e minhas contribuições para eles.
 
-## Projetos
+## Projetos 
 
 ### Sistema de Gerenciamento de Tarefas
 
@@ -27,5 +27,19 @@ Trabalhei em uma plataforma de comunicação SaaS com o objetivo de aprimorar a 
 - **Sistema de Notificações:** Implementei um sistema de notificações para manter os usuários atualizados sobre eventos importantes na plataforma.
 
 Essas melhorias ajudaram a plataforma a se tornar uma ferramenta de comunicação mais poderosa e segura para seus usuários, promovendo uma colaboração eficaz.
+
+### Weather App
+
+![Weather App Screenshot](/React/screenshot.png)
+
+Este é um aplicativo de previsão do tempo simples construído com React. Ele permite que os usuários obtenham informações meteorológicas para uma cidade específica.
+
+**Funcionalidades:**
+
+- Pesquisa de previsão do tempo por nome da cidade.
+- Exibição da temperatura atual, país, nome da cidade e descrição do clima.
+- Ícone de clima correspondente à condição atual.
+
+Para saber mais detalhes e como executar o aplicativo, consulte a seção dedicada ao Weather App neste portfólio.
 
 ---
