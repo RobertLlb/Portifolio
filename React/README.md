@@ -44,19 +44,18 @@ Este é um aplicativo de previsão do tempo simples construído com React. Ele p
 Acesse o diretório do projeto:
 
    ```bash
-Copy code
+
 cd weather-app
 Instale as dependências:
    ```
    ```bash
-Copy code
+
 npm install
    ```
 Inicie o aplicativo:
 
 
    ```bash
-Copy code
 npm start
    ```
 Abra o aplicativo em seu navegador acessando http://localhost:3000.
